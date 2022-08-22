@@ -1,14 +1,17 @@
 import AddModal from './AddModal'
 import './movieCard.css'
 import Stars from './Stars'
+import { Link } from "react-router-dom";
 
 export const MovieCard = ({movie,edit}) => {  
   return (
+
     <div >
+      
        <div className="card">
 
 <div className="imgBox">
-  <img src={movie.posterUrl} alt="mouse corsair" className="mouse"/>
+<Link to={`/desc/${movie.id}`}> <img src={movie.posterUrl} alt="mouse corsair" className="mouse"/></Link>
 </div>
 
 <div className="contentBox">
@@ -23,5 +26,6 @@ export const MovieCard = ({movie,edit}) => {
 </div>
 
     </div>
+    
   )
 }
